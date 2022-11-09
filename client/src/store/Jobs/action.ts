@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import { getAllJobs } from "../../api/getData";
 import { JobActionTypes, JobAction } from "./types";
 
-const axiosData = () => {
+export const axiosData = () => {
   return async (dispatch: Dispatch<JobAction>) => {
     dispatch({ type: JobActionTypes.FETCH_JOBS });
     await getAllJobs()
@@ -20,5 +20,3 @@ const axiosData = () => {
       );
   };
 };
-
-export { axiosData };

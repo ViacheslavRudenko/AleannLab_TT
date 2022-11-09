@@ -6,7 +6,7 @@ export const initialState: JobsState = {
   data: [],
 };
 
-const reducerData = (state = initialState, action: JobAction): JobsState => {
+const reducerJobs = (state = initialState, action: JobAction): JobsState => {
   switch (action.type) {
     case JobActionTypes.FETCH_JOBS: {
       return { loading: true, err: "", data: [] };
@@ -22,4 +22,4 @@ const reducerData = (state = initialState, action: JobAction): JobsState => {
       return state;
   }
 };
-export default reducerData;
+export default reducerJobs;

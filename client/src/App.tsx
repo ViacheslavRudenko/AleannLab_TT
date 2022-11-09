@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { axiosData } from "./store/Jobs/action";
+import { useActions } from "./hooks/useActions";
 
 function App() {
-  const dispatch = useDispatch();
+  const { axiosData } = useActions();
   useEffect(() => {
-    dispatch(axiosData() as any);
+    axiosData();
   }, []);
   return <div></div>;
 }
