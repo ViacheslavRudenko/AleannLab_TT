@@ -27,7 +27,7 @@ export type JobAction =
   | FetchJobsErrorAction;
 
 export interface Job {
-  id: string | number;
+  id: string;
   name: string;
   email: string;
   phone: string;
@@ -35,7 +35,7 @@ export interface Job {
   salary: string;
   adress: string;
   benefits: string[];
-  location: any[];
+  location: { lat: number; long: number };
   pictures: string[];
   createdAt: string;
   updatedAt: string;
