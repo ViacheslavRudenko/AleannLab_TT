@@ -33,12 +33,12 @@ export interface Job {
   phone: string;
   title: string;
   salary: string;
-  adress: string;
+  address: string;
   benefits: string[];
   location: { lat: number; long: number };
   pictures: string[];
   createdAt: string;
   updatedAt: string;
-  discription: string;
+  description: string;
   employment_type: string[];
 }
