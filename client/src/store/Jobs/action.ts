@@ -1,11 +1,11 @@
 import { Dispatch } from "redux";
-import { getData } from "../../api/getData";
+import { getAllJobs } from "../../api/getData";
 import { JobActionTypes, JobAction } from "./types";
 
 const axiosData = () => {
   return async (dispatch: Dispatch<JobAction>) => {
     dispatch({ type: JobActionTypes.FETCH_JOBS });
-    await getData()
+    await getAllJobs()
       .then((resp) =>
         dispatch({
           type: JobActionTypes.FETCH_JOBS_SUCCESS,
