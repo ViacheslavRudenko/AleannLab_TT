@@ -12,7 +12,7 @@ const reducerData = (state = initialState, action: JobAction): JobsState => {
       return { loading: true, err: "", data: [] };
     }
     case JobActionTypes.FETCH_JOBS_SUCCESS: {
-      return { loading: true, err: "", data: action.payload };
+      return { loading: false, err: "", data: action.payload };
     }
     case JobActionTypes.FETCH_JOBS_ERROR: {
       return { loading: false, err: action.payload, data: [] };
