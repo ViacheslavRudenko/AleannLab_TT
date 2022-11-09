@@ -41,4 +41,5 @@ export interface Job {
   updatedAt: string;
   description: string;
   employment_type: string[];
+  rating?: number;
 }

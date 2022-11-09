@@ -8,16 +8,16 @@ const JobBoard = () => {
   );
 
   return (
-    <div className="grid h-screen place-items-center">
+    <div className="grid place-items-center p-2 min-h-screen bg-slate-200">
       {err ? <p className="text-center text-red-600">{err}</p> : null}
       {loading ? (
         <p>Loading, please wait...</p>
       ) : (
-        <ul>
+        <ul className="grid gap-2">
           {data.map((job) => (
             <ol
               key={job.id}
-              className="grid grid-cols-[200px_minmax(900px,_1fr)_100px] gap-7"
+              className="grid  grid-cols-5 grid-rows-4 gap-4 px-3 py-6 rounded-lg bg-white"
             >
               <ListItem jobData={job} />
             </ol>
