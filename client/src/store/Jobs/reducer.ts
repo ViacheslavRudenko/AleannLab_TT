@@ -1,4 +1,4 @@
-import { JobsState, UserAction, UserActionTypes } from "./types";
+import { JobsState, JobAction, JobActionTypes } from "./types";
 
 export const initialState: JobsState = {
   loading: false,
@@ -6,15 +6,15 @@ export const initialState: JobsState = {
   data: [],
 };
 
-const reducerData = (state = initialState, action: UserAction): JobsState => {
+const reducerData = (state = initialState, action: JobAction): JobsState => {
   switch (action.type) {
-    case UserActionTypes.FETCH_JOBS: {
+    case JobActionTypes.FETCH_JOBS: {
       return { loading: true, err: "", data: [] };
     }
-    case UserActionTypes.FETCH_JOBS_SUCCESS: {
+    case JobActionTypes.FETCH_JOBS_SUCCESS: {
       return { loading: true, err: "", data: action.payload };
     }
-    case UserActionTypes.FETCH_JOBS_ERROR: {
+    case JobActionTypes.FETCH_JOBS_ERROR: {
       return { loading: false, err: action.payload, data: [] };
     }
 
