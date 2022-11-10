@@ -23,8 +23,9 @@ const ListItem = ({ jobData }: ListItemProps) => {
           alt={jobData.name}
         />
       </div>
-      <Link to={`/job-board/detailed/${jobData.id}`}>
-        <div className={styles.contentBox}>
+
+      <div className={styles.contentBox}>
+        <Link to={`/job-board/detailed/${jobData.id}`}>
           <div className={styles.contentBoxItem}>
             <h6 className={styles.title}>{jobData.title}</h6>
             <h4 className={styles.name}>{jobData.name}</h4>
@@ -35,8 +36,9 @@ const ListItem = ({ jobData }: ListItemProps) => {
               {jobData.address}
             </p>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
+
       <div className={styles.raitingBox}>
         <Rating rating={jobData?.rating || 4} />
       </div>
