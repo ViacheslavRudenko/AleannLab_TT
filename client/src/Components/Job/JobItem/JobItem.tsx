@@ -36,17 +36,17 @@ const JobItem = ({ jobItem }: JobItemType) => {
         <p className={styles.text}>Employment type</p>
         <ul className={styles.list}>
           {jobItem.employment_type.map((benefit: string, index: number) => (
-            <button key={index} className={styles.btnType}>
+            <div key={index} className={styles.btnType}>
               {benefit}
-            </button>
+            </div>
           ))}
         </ul>
         <p className={styles.text}>Benefits</p>
         <ul className={styles.list}>
           {jobItem.benefits.map((benefit: string, index: number) => (
-            <button key={index} className={styles.btnBenefit}>
+            <div key={index} className={styles.btnBenefit}>
               {benefit}
-            </button>
+            </div>
           ))}
         </ul>
       </div>
