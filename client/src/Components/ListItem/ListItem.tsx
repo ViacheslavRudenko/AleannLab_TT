@@ -1,6 +1,7 @@
 import LocationIcons from "./LocationIcons";
 import Rating from "./Rating";
 import { ListItemProps } from "./types";
+import styles from "./index.module.scss";
 
 const ListItem = ({ jobData }: ListItemProps) => {
   const getDaysPassDate = (prevDate: string): string => {
@@ -17,7 +18,7 @@ const ListItem = ({ jobData }: ListItemProps) => {
 
   return (
     <>
-      <div className="row-start-1 row-span-4  col-start-1 flex">
+      <div className={styles.imgBox}>
         <img
           style={{ clipPath: "circle()" }}
           src={jobData.pictures[0]}
@@ -25,25 +26,29 @@ const ListItem = ({ jobData }: ListItemProps) => {
         />
       </div>
 
-      <div className="col-start-2 col-span-5 row-start-2 row-span-4">
-        <div className="flex justify-between flex-col ">
-          <h6 className="font-bold">{jobData.title}</h6>
-          <h4>{jobData.name}</h4>
-          <p className="flex -ml-1">
-            <span className="pr-2">
+      <div className={styles.contentBox}>
+        <div className={styles.contentBoxItem}>
+          <h6 className={styles.title}>{jobData.title}</h6>
+          <h4 className={styles.name}>{jobData.name}</h4>
+          <p className={styles.text}>
+            <span className={styles.span}>
               <LocationIcons />
             </span>
             {jobData.address}
           </p>
         </div>
       </div>
-      <div className="col-start-2 col-span-4 row-start-1">
+
+      <div className={styles.raitingBox}>
         <Rating rating={jobData?.rating || 4} />
       </div>
-      <div className="row-start-1 row-span-1  col-span-3 col-start-4">
-        <div className="flex flex-col justify-between text-end  ">
-          <div className="hidden sm:block">sadfa</div>
-          <p className="font-size-2 ">{getDaysPassDate(jobData.createdAt)}</p>
+
+      <div className={styles.infoBox}>
+        <div className={styles.infoBoxItem}>
+          <div className={styles.wishList}>sadfa</div>
+          <p className={styles.postDate}>
+            {getDaysPassDate(jobData.createdAt)}
+          </p>
         </div>
       </div>
     </>

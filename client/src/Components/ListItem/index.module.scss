@@ -1,0 +1,40 @@
+.imgBox {
+  @apply row-start-1 row-span-4 col-start-1 flex 
+  tablet:col-start-1 tablet:col-span-1 tablet:row-start-1 tablet:row-span-1;
+}
+
+.contentBox {
+  @apply col-start-2 col-span-5 row-start-2 row-span-4
+  tablet:col-start-2 tablet:col-span-1 tablet:row-start-1 tablet:row-span-1 grid;
+  .contentBoxItem {
+    @apply grid justify-between;
+    .title {
+      @apply font-bold;
+    }
+    .text {
+      @apply flex -ml-1;
+      .span {
+        @apply pr-2;
+      }
+    }
+  }
+}
+
+.raitingBox {
+  @apply col-start-2 col-span-4 row-start-1
+  tablet:col-start-3 tablet:col-span-1 tablet:row-start-1 tablet:row-span-1;
+}
+
+.infoBox {
+  @apply row-start-1 row-span-1  col-span-3 col-start-4
+  tablet:col-start-4 tablet:col-span-1 tablet:row-start-1 tablet:row-span-1 grid;
+  .infoBoxItem {
+    @apply flex flex-col justify-between text-end;
+    .wishList {
+      @apply hidden tablet:block;
+    }
+    // .postDate {
+    //   @apply font-size-2;
+    // }
+  }
+}

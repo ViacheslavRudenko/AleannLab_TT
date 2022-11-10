@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import ListItem from "../Components/ListItem/ListItem";
 import { RootState } from "../store/root-reducer";
+import styles from "./index.module.scss";
 
 const JobBoard = () => {
   const { data, err, loading } = useSelector(
@@ -8,17 +9,14 @@ const JobBoard = () => {
   );
 
   return (
-    <div className="grid place-items-center p-2 min-h-screen bg-slate-200">
-      {err ? <p className="text-center text-red-600">{err}</p> : null}
+    <div className={styles.jobBoard}>
+      {err ? <p className={styles.err}>{err}</p> : null}
       {loading ? (
         <p>Loading, please wait...</p>
       ) : (
-        <ul className="grid gap-2">
+        <ul className={styles.list}>
           {data.map((job) => (
-            <ol
-              key={job.id}
-              className="grid  grid-cols-5 grid-rows-4 gap-4 px-3 py-6 rounded-lg bg-white"
-            >
+            <ol key={job.id} className={styles.listItem}>
               <ListItem jobData={job} />
             </ol>
           ))}
