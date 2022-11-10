@@ -37,12 +37,17 @@ const PageHeader = ({ jobItem }: JobItemType) => {
             </button>
           </div>
           <div>
-            <button className={styles.btn}>
-              <span className={styles.span}>
-                <Share />
-              </span>
-              <span>Share</span>
-            </button>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=example.org"
+              target="_blank"
+            >
+              <button className={styles.btn}>
+                <span className={styles.span}>
+                  <Share />
+                </span>
+                <span>Share</span>
+              </button>
+            </a>
           </div>
         </div>
       </div>
