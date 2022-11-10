@@ -1,7 +1,7 @@
 .section {
   @apply py-6 px-4 bg-white;
   .boxContent {
-    @apply tablet:grid grid-cols-[minmax(200px,770px)_minmax(200px,400px)] gap-14 justify-center;
+    @apply tablet:grid grid-cols-[minmax(200px,770px)_minmax(100px,400px)] gap-14 justify-center;
   }
   .boxBtnBack {
     @apply text-white -ml-10;
