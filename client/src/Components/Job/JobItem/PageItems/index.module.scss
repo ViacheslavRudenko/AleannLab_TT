@@ -1,0 +1,15 @@
+.box {
+  @apply grid;
+  .title {
+    @apply text-[#3A4562] font-bold text-lg border-b-2 border-[#3A4562] pb-3;
+  }
+  .actionBox {
+    @apply grid grid-cols-2 py-4;
+    .btn {
+      @apply flex;
+      .span {
+        @apply pr-3;
+      }
+    }
+  }
+}

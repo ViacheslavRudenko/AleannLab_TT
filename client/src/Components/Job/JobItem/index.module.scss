@@ -1,0 +1,63 @@
+.box {
+  @apply py-3 text-[#3A4562];
+  .mainTitle {
+    @apply font-bold text-2xl;
+  }
+  .boxInfo {
+    @apply flex justify-between items-center py-2;
+    .period {
+      @apply text-[#878D9D];
+    }
+    .priceBox {
+      @apply grid justify-items-end;
+      .price {
+        @apply font-bold text-2xl;
+      }
+    }
+  }
+  .applyBox {
+    @apply py-4 max-w-fit mx-auto;
+    .btn {
+      @apply py-5 px-7 bg-[#384564] text-white rounded-lg;
+    }
+  }
+  .title {
+    @apply text-3xl font-bold text-[#3A4562] border-b-2 border-[#3A4562];
+  }
+  .imgBox {
+    @apply pt-20;
+  }
+  .detailBox {
+    @apply pt-10;
+    .text {
+      @apply pb-3 pt-6 text-[#38415dc6];
+    }
+    .list {
+      @apply grid  grid-cols-3 gap-4;
+      .btnType {
+        @apply p-4 bg-[#c5cee4] rounded-lg w-fit border-2 border-[#5b688b];
+      }
+      .btnBenefit {
+        @apply p-4 bg-[#fdeca2] rounded-lg w-fit border-2 border-[#FFCF00];
+      }
+    }
+  }
+  .contactsBox {
+    @apply pt-10 pb-5;
+  }
+  .contacts {
+    @apply bg-[#2A3047] rounded-lg;
+    .infoBox {
+      @apply py-7 px-14 text-white leading-9;
+      .name {
+        @apply pb-4 font-bold;
+      }
+      .address {
+        @apply flex -ml-1;
+        .ico {
+          @apply pr-2;
+        }
+      }
+    }
+  }
+}
