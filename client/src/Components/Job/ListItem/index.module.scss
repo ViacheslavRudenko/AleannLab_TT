@@ -9,7 +9,7 @@
   .contentBoxItem {
     @apply grid justify-between;
     .title {
-      @apply font-bold;
+      @apply font-bold text-[#3A4562] tablet:text-xl;
     }
     .text {
       @apply flex -ml-1;
@@ -33,8 +33,8 @@
     .wishList {
       @apply hidden tablet:block;
     }
-    // .postDate {
-    //   @apply font-size-2;
-    // }
+    .postDate {
+      @apply text-sm;
+    }
   }
 }

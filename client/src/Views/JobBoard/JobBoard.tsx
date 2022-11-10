@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import ListItem from "../Components/ListItem/ListItem";
-import { RootState } from "../store/root-reducer";
+import ListItem from "../../Components/Job/ListItem/ListItem";
+import { RootState } from "../../store/root-reducer";
 import styles from "./index.module.scss";
 
 const JobBoard = () => {
