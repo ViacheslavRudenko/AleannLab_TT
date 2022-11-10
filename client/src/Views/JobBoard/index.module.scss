@@ -1,5 +1,5 @@
 .jobBoard {
-  @apply grid place-items-center p-2 min-h-screen min-w-[320px] max-w-[1400px] mx-auto py-7;
+  @apply grid place-items-center p-2 mx-auto py-7;
   .err {
     @apply text-red-600;
   }

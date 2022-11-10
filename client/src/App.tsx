@@ -10,7 +10,9 @@ function App() {
   }, []);
   return (
     <div className={styles.content}>
-      <Routing />
+      <div className={styles.contentBox}>
+        <Routing />
+      </div>
     </div>
   );
 }

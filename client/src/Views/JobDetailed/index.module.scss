@@ -1,0 +1,12 @@
+.section {
+  @apply py-6 px-4 bg-white;
+  .boxContent {
+    @apply tablet:grid grid-cols-[minmax(200px,770px)_minmax(200px,400px)] gap-14 justify-center;
+  }
+  .boxBtnBack {
+    @apply text-white -ml-10;
+    .btnback {
+      @apply bg-[#8086948f] py-4 px-6 rounded-lg hidden tablet:block;
+    }
+  }
+}

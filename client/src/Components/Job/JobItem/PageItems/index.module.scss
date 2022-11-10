@@ -1,10 +1,10 @@
 .box {
-  @apply grid;
+  @apply tablet:flex tablet:border-b-2 border-[#3a456261] justify-between items-end;
   .title {
-    @apply text-[#3A4562] font-bold text-lg border-b-2 border-[#3A4562] pb-3;
+    @apply text-[#3A4562] font-bold text-lg border-b-2 border-[#3a456261] pb-3 tablet:border-0;
   }
   .actionBox {
-    @apply grid grid-cols-2 py-4;
+    @apply grid grid-cols-2 py-4 tablet:justify-items-end;
     .btn {
       @apply flex;
       .span {

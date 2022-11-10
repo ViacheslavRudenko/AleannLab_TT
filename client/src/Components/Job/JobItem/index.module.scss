@@ -1,31 +1,35 @@
 .box {
   @apply py-3 text-[#3A4562];
-  .mainTitle {
-    @apply font-bold text-2xl;
-  }
-  .boxInfo {
-    @apply flex justify-between items-center py-2;
-    .period {
-      @apply text-[#878D9D];
+  .mainInfo {
+    @apply grid tablet:grid-cols-[minmax(150px,_1fr)_150px] gap-4;
+    .mainTitle {
+      @apply font-bold text-2xl;
     }
-    .priceBox {
-      @apply grid justify-items-end;
-      .price {
-        @apply font-bold text-2xl;
+    .boxInfo {
+      @apply flex justify-between items-center py-2;
+      .period {
+        @apply text-[#878D9D] tablet:hidden block;
       }
+      .priceBox {
+        @apply grid justify-items-end;
+        .price {
+          @apply font-bold text-2xl;
+        }
+      }
+    }
+    .period {
+      @apply text-[#878D9D] hidden tablet:block py-3;
     }
   }
   .applyBox {
-    @apply py-4 max-w-fit mx-auto;
+    @apply py-4 max-w-fit mx-auto first-of-type:hidden first-of-type:tablet:block first-of-type:mx-0;
     .btn {
-      @apply py-5 px-7 bg-[#384564] text-white rounded-lg;
+      @apply py-4 px-5 bg-[#384564] text-white rounded-lg;
     }
   }
-  .title {
-    @apply text-3xl font-bold text-[#3A4562] border-b-2 border-[#3A4562];
-  }
+
   .imgBox {
-    @apply pt-20;
+    @apply pt-10;
   }
   .detailBox {
     @apply pt-10;
@@ -35,28 +39,32 @@
     .list {
       @apply grid  grid-cols-3 gap-4;
       .btnType {
-        @apply p-4 bg-[#c5cee4] rounded-lg w-fit border-2 border-[#5b688b];
+        @apply p-4 bg-[#c5cee4] rounded-lg border-2 border-[#5b688b];
       }
       .btnBenefit {
-        @apply p-4 bg-[#fdeca2] rounded-lg w-fit border-2 border-[#FFCF00];
+        @apply p-4 bg-[#fdeca2] rounded-lg border-2 border-[#FFCF00];
       }
     }
   }
-  .contactsBox {
-    @apply pt-10 pb-5;
-  }
-  .contacts {
-    @apply bg-[#2A3047] rounded-lg;
-    .infoBox {
-      @apply py-7 px-14 text-white leading-9;
-      .name {
-        @apply pb-4 font-bold;
-      }
-      .address {
-        @apply flex -ml-1;
-        .ico {
-          @apply pr-2;
-        }
+}
+.title {
+  @apply text-3xl font-bold text-[#3A4562] border-b-2 border-[#3a456261];
+}
+
+.contactsBoxTitle {
+  @apply pt-10 pb-5 tablet:hidden;
+}
+.contacts {
+  @apply bg-[#2A3047] rounded-lg  pt-2 pb-2;
+  .infoBox {
+    @apply py-7 px-14 text-white leading-9;
+    .name {
+      @apply pb-4 font-bold;
+    }
+    .address {
+      @apply flex -ml-1;
+      .ico {
+        @apply pr-2;
       }
     }
   }

@@ -1,3 +1,6 @@
 .content {
   @apply bg-slate-200 text-[#878D9D];
+  .contentBox {
+    @apply min-h-screen min-w-[320px] max-w-[1400px] mx-auto;
+  }
 }
