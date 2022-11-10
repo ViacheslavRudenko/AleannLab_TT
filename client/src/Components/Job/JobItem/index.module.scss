@@ -63,6 +63,9 @@
     }
     .address {
       @apply flex -ml-1;
+    }
+    .link {
+      @apply flex items-center;
       .ico {
         @apply pr-2;
       }

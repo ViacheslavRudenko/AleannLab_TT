@@ -11,14 +11,23 @@ const JobContact = ({ jobItem }: JobItemType) => {
       <div className={styles.contacts}>
         <div className={styles.infoBox}>
           <h6 className={styles.name}>{jobItem.name}</h6>
-          <p className={styles.address}>
-            <span className={styles.ico}>
-              <LocationIcons />
-            </span>
-            <span>{jobItem.address}</span>
-          </p>
-          <p>{jobItem.phone}</p>
-          <p>{jobItem.email}</p>
+          <div>
+            <a
+              className={styles.link}
+              href={`http://www.google.com/maps/place/${jobItem.location.lat},${jobItem.location.long}`}
+            >
+              <span className={styles.ico}>
+                <LocationIcons />
+              </span>
+              <span>{jobItem.address}</span>
+            </a>
+          </div>
+          <div>
+            <a href={`tel:${jobItem.phone}`}>{jobItem.phone}</a>
+          </div>
+          <div>
+            <a href={`mailto:${jobItem.email}`}>{jobItem.email}</a>
+          </div>
         </div>
       </div>
     </>
