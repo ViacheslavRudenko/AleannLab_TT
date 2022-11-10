@@ -18,7 +18,6 @@ const JobDetailed = () => {
     //i do it, because get item by id from server not working
     setjobItem(data.filter((job: Job) => job.id === params.id)[0] || {});
   }, [params, data]);
-  console.log(jobItem);
 
   const loading = <p>Loading...</p>;
 
@@ -28,7 +27,7 @@ const JobDetailed = () => {
       {Object.keys(jobItem).length ? (
         <div className={styles.boxContent}>
           <div>
-            <PageHeader />
+            <PageHeader jobItem={jobItem} />
             <JobItem jobItem={jobItem} />
           </div>
           <div>

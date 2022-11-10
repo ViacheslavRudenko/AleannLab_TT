@@ -4,9 +4,11 @@ import styles from "./App.module.scss";
 import Routing from "./Components/Routing/Routing";
 
 function App() {
-  const { axiosData } = useActions();
+  const { axiosData, addJobsToWishList } = useActions();
   useEffect(() => {
     axiosData();
+    const wishList = localStorage.getItem("wishList");
+    wishList && addJobsToWishList(JSON.parse(wishList));
   }, []);
   return (
     <div className={styles.content}>

@@ -3,16 +3,27 @@ import Rating from "../../Icons/Rating";
 import { ListItemProps } from "./types";
 import styles from "./index.module.scss";
 import WishListIcon from "../../Icons/WihList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getDaysPassDate } from "../functions";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/root-reducer";
+import { useActions } from "../../../hooks/useActions";
 
 const ListItem = ({ jobData }: ListItemProps) => {
   const [isInWishList, setIsInWishList] = useState(false);
+  const { addNewJobToWihList, removeJobFromWishList } = useActions();
+  const wihList = useSelector(
+    (state: RootState) => state.UserActivity.wishList
+  );
+  const toggleWishList = () =>
+    isInWishList
+      ? removeJobFromWishList(jobData.id)
+      : addNewJobToWihList(jobData.id);
 
-  const setToWishList = () => {
-    setIsInWishList(!isInWishList);
-  };
+  useEffect(() => {
+    setIsInWishList(wihList.some((data: string) => data === jobData.id));
+  }, [wihList]);
 
   return (
     <>
@@ -46,7 +57,7 @@ const ListItem = ({ jobData }: ListItemProps) => {
       <div className={styles.infoBox}>
         <div className={styles.infoBoxItem}>
           <div className={styles.wishList}>
-            <button onClick={setToWishList}>
+            <button onClick={toggleWishList}>
               <WishListIcon isInWishList={isInWishList} />
             </button>
           </div>
