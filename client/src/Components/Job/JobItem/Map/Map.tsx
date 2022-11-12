@@ -1,5 +1,5 @@
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-import { JobItemType } from "../../types";
+import { JobItemType } from "../types";
 import { mapTheme } from "./Theme";
 
 const containerStyle = {

@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/root-reducer";
 import { Job } from "../../store/Jobs/types";
 import { useEffect, useState } from "react";
-import PageHeader from "../../Components/Job/JobItem/PageItems/PageHeader";
+import PageHeader from "../../Components/Job/JobItem/PageHeader/PageHeader";
 import JobContact from "../../Components/Job/JobItem/JobsContact";
 import { Link } from "react-router-dom";
 import styles from "./index.module.scss";

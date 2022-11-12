@@ -1,7 +1,7 @@
 import LocationIcons from "../../Icons/LocationIcons";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
-import Map from "./PageItems/Map/Map";
+import Map from "./Map/Map";
 
 const JobContact = ({ jobItem }: JobItemType) => {
   return (
