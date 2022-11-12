@@ -30,6 +30,13 @@ const JobItem = ({ jobItem }: JobItemType) => {
 
       <div className={styles.imgBox}>
         <h6 className={styles.title}>Attached images</h6>
+        <ul className={styles.imgList}>
+          {jobItem.pictures.map((picture: string, index: number) => (
+            <ol key={index} className={styles.imgListItem}>
+              <img src={picture} alt="img" key={index} />
+            </ol>
+          ))}
+        </ul>
       </div>
       <div className={styles.detailBox}>
         <h6 className={styles.title}>Additional info</h6>
