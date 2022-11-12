@@ -1,6 +1,7 @@
 import LocationIcons from "../../Icons/LocationIcons";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
+import Map from "./PageItems/Map/Map";
 
 const JobContact = ({ jobItem }: JobItemType) => {
   return (
@@ -28,6 +29,9 @@ const JobContact = ({ jobItem }: JobItemType) => {
           <div>
             <a href={`mailto:${jobItem.email}`}>{jobItem.email}</a>
           </div>
+        </div>
+        <div>
+          <Map jobItem={jobItem} />
         </div>
       </div>
     </>
