@@ -10,5 +10,5 @@ import config from "./token";
 // };
 
 export const getAllJobs = () => {
-  return axios.get<Job[]>("data.json");
+  return axios.get<Job[]>("./data.json");
 };
