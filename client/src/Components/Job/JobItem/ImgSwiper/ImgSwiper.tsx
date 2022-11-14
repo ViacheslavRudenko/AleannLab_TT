@@ -19,7 +19,7 @@ const ImgSwiper = ({ jobItem }: ImgSwiperType): ReactElement => {
   return (
     <Swiper spaceBetween={50} breakpoints={breakpoints}>
       {jobItem.pictures.map((picture: string, index: number) => (
-        <SwiperSlide>
+        <SwiperSlide key={index}>
           <img src={picture} alt="img" key={index} />
         </SwiperSlide>
       ))}
