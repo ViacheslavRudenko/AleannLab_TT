@@ -35,14 +35,12 @@ const JobItem = ({ jobItem }: JobItemType) => {
         <Swiper
           spaceBetween={50}
           breakpoints={{
-            // when window width is >= 640px
             320: {
               slidesPerView: 1.5,
             },
             640: {
               slidesPerView: 2.5,
             },
-            // when window width is >= 768px
             768: {
               slidesPerView: 3,
             },

@@ -1,8 +1,5 @@
 .jobBoard {
   @apply grid place-items-center p-2 mx-auto py-7;
-  .err {
-    @apply text-red-600;
-  }
   .list {
     @apply grid gap-2;
     .listItem {

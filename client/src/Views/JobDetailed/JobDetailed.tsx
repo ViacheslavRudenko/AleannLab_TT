@@ -8,6 +8,7 @@ import PageHeader from "../../Components/Job/JobItem/PageHeader/PageHeader";
 import JobContact from "../../Components/Job/JobItem/JobsContact";
 import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
+import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
 
 const JobDetailed = () => {
   const params = useParams();
@@ -16,10 +17,8 @@ const JobDetailed = () => {
 
   useEffect(() => {
     //i do it, because get item by id from server not working
-    setjobItem(data.filter((job: Job) => job.id === params.id)[0] || {});
+    setjobItem(data.filter((job: Job) => job.id === params.id).shift() || {});
   }, [params, data]);
-
-  const loading = <p>Loading...</p>;
 
   return data.length ? (
     <div className={styles.section}>
@@ -42,11 +41,11 @@ const JobDetailed = () => {
           </div>
         </div>
       ) : (
-        loading
+        <PageLoading />
       )}
     </div>
   ) : (
-    loading
+    <PageLoading />
   );
 };
 

@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 import ListItem from "../../Components/Job/ListItem/ListItem";
+import Error from "../../Components/PageInfo/PageError/Error";
+import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
 import { RootState } from "../../store/root-reducer";
 import styles from "./index.module.scss";
 
@@ -10,9 +12,9 @@ const JobBoard = () => {
 
   return (
     <div className={styles.jobBoard}>
-      {err ? <p className={styles.err}>{err}</p> : null}
+      {err ? <Error err={err} /> : null}
       {loading ? (
-        <p>Loading, please wait...</p>
+        <PageLoading />
       ) : (
         <ul className={styles.list}>
           {data.map((job) => (
