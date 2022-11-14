@@ -1,8 +1,7 @@
 import { getDaysPassDate } from "../functions";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import ImgSwiper from "./ImgSwiper/ImgSwiper";
 
 const JobItem = ({ jobItem }: JobItemType) => {
   return (
@@ -32,26 +31,7 @@ const JobItem = ({ jobItem }: JobItemType) => {
       <div className={styles.imgBox}>
         <h6 className={styles.title}>Attached images</h6>
 
-        <Swiper
-          spaceBetween={50}
-          breakpoints={{
-            320: {
-              slidesPerView: 1.5,
-            },
-            640: {
-              slidesPerView: 2.5,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {jobItem.pictures.map((picture: string, index: number) => (
-            <SwiperSlide>
-              <img src={picture} alt="img" key={index} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <ImgSwiper jobItem={jobItem} />
       </div>
       <div className={styles.detailBox}>
         <h6 className={styles.title}>Additional info</h6>
