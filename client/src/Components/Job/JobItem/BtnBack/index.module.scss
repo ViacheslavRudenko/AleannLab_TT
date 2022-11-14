@@ -1,0 +1,9 @@
+.boxBtnBack {
+  @apply text-white -ml-10;
+  .btnback {
+    @apply bg-[#8086948f] py-4 px-6 rounded-lg hidden tablet:block;
+    .span {
+      @apply pr-3;
+    }
+  }
+}

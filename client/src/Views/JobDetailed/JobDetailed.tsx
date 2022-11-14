@@ -6,9 +6,9 @@ import { Job } from "../../store/Jobs/types";
 import { useEffect, useState } from "react";
 import PageHeader from "../../Components/Job/JobItem/PageHeader/PageHeader";
 import JobContact from "../../Components/Job/JobItem/JobsContact";
-import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
 import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
+import { BtnBack } from "../../Components/Job/JobItem/BtnBack/BtnBack";
 
 const JobDetailed = () => {
   const params = useParams();
@@ -32,13 +32,7 @@ const JobDetailed = () => {
           <div>
             <JobContact jobItem={jobItem} />
           </div>
-          <div className={styles.boxBtnBack}>
-            <Link to={"/job-board"}>
-              <button className={styles.btnback}>
-                <span className="pr-3">&#10094;</span> RETURN TO JOB BOARD
-              </button>
-            </Link>
-          </div>
+          <BtnBack />
         </div>
       ) : (
         <PageLoading />
