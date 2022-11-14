@@ -3,14 +3,14 @@ import Rating from "../../Icons/Rating";
 import { ListItemProps } from "./types";
 import styles from "./index.module.scss";
 import WishListIcon from "../../Icons/WihList";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { getDaysPassDate } from "../functions";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/root-reducer";
 import { useActions } from "../../../hooks/useActions";
 
-const ListItem = ({ jobData }: ListItemProps) => {
+const ListItem = ({ jobData }: ListItemProps): ReactElement => {
   const [isInWishList, setIsInWishList] = useState(false);
   const { addNewJobToWihList, removeJobFromWishList } = useActions();
   const wihList = useSelector(

@@ -2,8 +2,9 @@ import LocationIcons from "../../Icons/LocationIcons";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
 import Map from "./Map/Map";
+import { ReactElement } from "react";
 
-const JobContact = ({ jobItem }: JobItemType) => {
+const JobContact = ({ jobItem }: JobItemType): ReactElement => {
   return (
     <>
       <div className={styles.contactsBoxTitle}>

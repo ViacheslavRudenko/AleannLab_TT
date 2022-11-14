@@ -1,8 +1,9 @@
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { ReactElement } from "react";
 import { JobItemType } from "../types";
 import { mapTheme } from "./Theme";
 
-const containerStyle = {
+const containerStyle: {} = {
   window: "100%",
   height: "200px",
 };
@@ -24,7 +25,7 @@ const defaultOptions = {
   disableDefaultUI: true,
 };
 
-const Map = ({ jobItem }: JobItemType) => {
+const Map = ({ jobItem }: JobItemType): ReactElement => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: API_KEY,

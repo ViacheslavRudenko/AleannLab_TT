@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/root-reducer";
 import { Job } from "../../store/Jobs/types";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import PageHeader from "../../Components/Job/JobItem/PageHeader/PageHeader";
 import JobContact from "../../Components/Job/JobItem/JobsContact";
 import styles from "./index.module.scss";
 import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
 import { BtnBack } from "../../Components/Job/JobItem/BtnBack/BtnBack";
 
-const JobDetailed = () => {
+const JobDetailed: React.FC = (): ReactElement => {
   const params = useParams();
   const [jobItem, setjobItem] = useState({});
   const { data, err } = useSelector((state: RootState) => state.JobsData);

@@ -1,4 +1,6 @@
-const LocationIcons = () => {
+import { ReactElement } from "react";
+
+const LocationIcons = (): ReactElement => {
   return (
     <>
       <svg

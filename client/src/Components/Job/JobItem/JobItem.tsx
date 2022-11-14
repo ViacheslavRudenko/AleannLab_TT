@@ -2,8 +2,9 @@ import { getDaysPassDate } from "../functions";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
 import ImgSwiper from "./ImgSwiper/ImgSwiper";
+import { ReactElement } from "react";
 
-const JobItem = ({ jobItem }: JobItemType) => {
+const JobItem = ({ jobItem }: JobItemType): ReactElement => {
   return (
     <div className={styles.box}>
       <div className={styles.applyBox}>

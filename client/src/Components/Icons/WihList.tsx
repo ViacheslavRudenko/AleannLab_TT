@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
 import { WishListProps } from "./types";
 
-const WishListIcon = ({ isInWishList }: WishListProps) => {
+const WishListIcon = ({ isInWishList }: WishListProps): ReactElement => {
   return (
     <svg
       width="18"

@@ -1,7 +1,9 @@
+import { ReactElement } from "react";
 import { RatingProps } from "./types";
 
-const ratingArr = [1, 2, 3, 4, 5];
-const Rating = ({ rating }: RatingProps) => {
+const ratingArr: number[] = [1, 2, 3, 4, 5];
+
+const Rating = ({ rating }: RatingProps): ReactElement => {
   return (
     <div className="flex items-center">
       {ratingArr.map((ratingItem) => (

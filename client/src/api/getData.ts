@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { Job } from "../store/Jobs/types";
 import config from "./token";
 

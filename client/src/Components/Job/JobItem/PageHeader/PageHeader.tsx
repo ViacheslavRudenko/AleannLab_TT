@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useActions } from "../../../../hooks/useActions";
 import { RootState } from "../../../../store/root-reducer";
@@ -7,7 +7,7 @@ import WishListIcon from "../../../Icons/WihList";
 import { JobItemType } from "../types";
 import styles from "./index.module.scss";
 
-const PageHeader = ({ jobItem }: JobItemType) => {
+const PageHeader = ({ jobItem }: JobItemType): ReactElement => {
   const { addNewJobToWihList, removeJobFromWishList } = useActions();
   const [isInWishList, setIsInWishList] = useState(false);
   const wihList = useSelector(

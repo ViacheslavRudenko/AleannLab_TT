@@ -1,4 +1,6 @@
-const Share = () => {
+import { ReactElement } from "react";
+
+const Share = (): ReactElement => {
   return (
     <svg
       width="19"

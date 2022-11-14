@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
 
-export const BtnBack = () => {
+export const BtnBack = (): ReactElement => {
   return (
     <>
       <div className={styles.boxBtnBack}>
