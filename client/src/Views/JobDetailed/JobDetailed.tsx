@@ -9,6 +9,8 @@ import JobContact from "../../Components/Job/JobItem/JobsContact";
 import styles from "./index.module.scss";
 import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
 import { BtnBack } from "../../Components/Job/JobItem/BtnBack/BtnBack";
+import Form from "../../Components/Form/Form";
+import Modal from "../../Components/Modal/Modal";
 
 const JobDetailed: React.FC = (): ReactElement => {
   const params = useParams();

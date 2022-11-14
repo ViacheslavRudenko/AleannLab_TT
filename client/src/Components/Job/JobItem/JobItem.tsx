@@ -2,13 +2,30 @@ import { getDaysPassDate } from "../functions";
 import { JobItemType } from "./types";
 import styles from "./index.module.scss";
 import ImgSwiper from "./ImgSwiper/ImgSwiper";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
+import Modal from "../../Modal/Modal";
+import Form from "../../Form/Form";
 
 const JobItem = ({ jobItem }: JobItemType): ReactElement => {
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(<></>);
+
+  const setApply = () => {
+    setModalContent(
+      <Form
+        setIsModalOpen={setIsApplyModalOpen}
+        setModalContent={setModalContent}
+      />
+    );
+    setIsApplyModalOpen(true);
+  };
+
   return (
     <div className={styles.box}>
       <div className={styles.applyBox}>
-        <button className={styles.btn}>APPLY NOW</button>
+        <button onClick={setApply} className={styles.btn}>
+          APPLY NOW
+        </button>
       </div>
 
       <div className={styles.mainInfo}>
@@ -53,6 +70,14 @@ const JobItem = ({ jobItem }: JobItemType): ReactElement => {
           ))}
         </ul>
       </div>
+      {isApplyModalOpen && (
+        <Modal
+          title={"Your contact details"}
+          content={modalContent}
+          isModalOpen={isApplyModalOpen}
+          setIsModalOpen={setIsApplyModalOpen}
+        />
+      )}
     </div>
   );
 };
