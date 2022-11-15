@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 import ImgSwiper from "./ImgSwiper/ImgSwiper";
 import { ReactElement, useState } from "react";
 import Modal from "../../Modal/Modal";
-import Form from "../../Form/Form";
+import Form from "./Form/Form";
 
 const JobItem = ({ jobItem }: JobItemType): ReactElement => {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);

@@ -4,7 +4,6 @@ import CustomErrorMessage from "./Error/Error";
 import { formArr, formdefaultValues, formSchema } from "./data";
 import { FormValuesTypes } from "./types";
 import styles from "./index.module.scss";
-import { style } from "@mui/system";
 
 const Form = ({ setIsModalOpen, setModalContent }: any) => {
   const {
@@ -30,7 +29,10 @@ const Form = ({ setIsModalOpen, setModalContent }: any) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit((values) => actionWithForm(values))}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit((values) => actionWithForm(values))}
+      >
         <div>
           <ul className={styles.formList}>
             {formArr.map((formData) => (
@@ -57,7 +59,7 @@ const Form = ({ setIsModalOpen, setModalContent }: any) => {
               </ol>
             ))}
           </ul>
-          <button type="submit" className="btnSubmit">
+          <button type="submit" className={styles.btnSubmit}>
             Apply
           </button>
         </div>
