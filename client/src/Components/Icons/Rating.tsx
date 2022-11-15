@@ -12,8 +12,8 @@ const Rating = ({ rating }: RatingProps): ReactElement => {
           aria-hidden="true"
           className={
             ratingItem > rating
-              ? "w-5 h-5 text-gray-300 dark:text-gray-500"
-              : "w-5 h-5 text-yellow-400"
+              ? "w-5 h-5 text-blue-100 dark:text-blue-100"
+              : "w-5 h-5 text-blue-600"
           }
           fill="currentColor"
           viewBox="0 0 20 20"
