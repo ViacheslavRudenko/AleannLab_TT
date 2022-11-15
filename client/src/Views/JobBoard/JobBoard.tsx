@@ -2,7 +2,6 @@ import { Pagination } from "@mui/material";
 import { ReactElement, useState } from "react";
 import { useSelector } from "react-redux";
 import ListItem from "../../Components/Job/ListItem/ListItem";
-
 import Error from "../../Components/PageInfo/PageError/Error";
 import PageLoading from "../../Components/PageInfo/PageLoading/PageLoading";
 import { RootState } from "../../store/root-reducer";
@@ -34,7 +33,7 @@ const JobBoard: React.FC = (): ReactElement => {
                 <ListItem jobData={job} />
               </ol>
             ))}
-          <div className="flex justify-center py-10">
+          <div className={styles.pagination}>
             {!err.length ? (
               <Pagination
                 variant="outlined"
