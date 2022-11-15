@@ -43,7 +43,9 @@ const JobItem = ({ jobItem }: JobItemType): ReactElement => {
       <p>{jobItem.description}</p>
 
       <div className={styles.applyBox}>
-        <button className={styles.btn}>APPLY NOW</button>
+        <button onClick={setApply} className={styles.btn}>
+          APPLY NOW
+        </button>
       </div>
 
       <div className={styles.imgBox}>
