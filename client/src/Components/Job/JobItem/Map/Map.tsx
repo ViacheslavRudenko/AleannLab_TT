@@ -2,9 +2,10 @@ import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { ReactElement } from "react";
 import { JobItemType } from "../types";
 import { mapTheme } from "./Theme";
+import CSS from "csstype";
 
-const containerStyle: {} = {
-  window: "100%",
+const containerStyle: CSS.Properties = {
+  width: "100%",
   height: "200px",
 };
 

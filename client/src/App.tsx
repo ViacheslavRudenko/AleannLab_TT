@@ -10,6 +10,7 @@ function App() {
     const wishList = localStorage.getItem("wishList");
     wishList && addJobsToWishList(JSON.parse(wishList));
   }, []);
+
   return (
     <div className={styles.content}>
       <div className={styles.contentBox}>

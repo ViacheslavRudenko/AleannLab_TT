@@ -1,6 +1,12 @@
 import styles from "./index.module.scss";
+import { ModalTypes } from "./types";
 
-export const Modal = ({ title, content, isModalOpen, setIsModalOpen }: any) => {
+export const Modal = ({
+  title,
+  content,
+  isModalOpen,
+  setIsModalOpen,
+}: ModalTypes) => {
   return (
     <>
       {isModalOpen ? (

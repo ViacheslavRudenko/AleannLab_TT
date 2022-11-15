@@ -15,7 +15,7 @@ const JobBoard: React.FC = (): ReactElement => {
   );
   const [page, setPage] = useState(1);
 
-  const getPageValue = (e: any, v: number) => {
+  const getPageValue = (e: any, v: number): void => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setPage(v);
   };
