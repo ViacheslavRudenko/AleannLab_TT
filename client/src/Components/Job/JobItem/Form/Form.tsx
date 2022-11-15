@@ -1,11 +1,11 @@
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import CustomErrorMessage from "./Error/Error";
 import { formArr, formdefaultValues, formSchema } from "./data";
-import { FormValuesTypes } from "./types";
+import { FormPropsTypes, FormValuesTypes } from "./types";
 import styles from "./index.module.scss";
+import CastomInput from "./Inputs/CastomInput";
 
-const Form = ({ setIsModalOpen, setModalContent }: any) => {
+const Form = ({ setIsModalOpen, setModalContent }: FormPropsTypes) => {
   const {
     handleSubmit,
     formState: { errors },
@@ -25,6 +25,7 @@ const Form = ({ setIsModalOpen, setModalContent }: any) => {
     setTimeout(() => {
       setIsModalOpen(false);
     }, 3000);
+    console.log(values);
   };
 
   return (
@@ -41,19 +42,12 @@ const Form = ({ setIsModalOpen, setModalContent }: any) => {
                   name={formData.name}
                   control={control}
                   render={({ field: { onChange, value } }) => (
-                    <>
-                      <label className={styles.label}>{formData.label}</label>
-                      <input
-                        className={styles.input}
-                        type={formData.type}
-                        value={value || ""}
-                        name={formData.name}
-                        onChange={onChange}
-                      />
-                      <CustomErrorMessage
-                        err={errors[formData.name]?.message}
-                      />
-                    </>
+                    <CastomInput
+                      onChange={onChange}
+                      value={value}
+                      errors={errors}
+                      formData={formData}
+                    />
                   )}
                 />
               </ol>

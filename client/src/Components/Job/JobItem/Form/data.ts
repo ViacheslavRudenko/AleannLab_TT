@@ -15,28 +15,29 @@ export const formdefaultValues: any = {
   tel: null,
 };
 
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 export const formSchema = yup.object({
   firstName: yup
     .string()
+    .required("Name is required.")
     .min(2)
     .max(10)
-    .matches(/^[A-Za-z ]*$/, "Please enter valid name")
-    .required("Name is required."),
+    .matches(/^[A-Za-z ]*$/, "Please enter valid name"),
   lastName: yup
     .string()
+    .required("Last Name is required.")
     .min(2)
     .matches(/^[A-Za-z ]*$/, "Please enter valid last name")
-    .max(10)
-    .required("Last Name is required."),
+    .max(10),
   email: yup
     .string()
-    .email("Invalid email format")
-    .required("Mail is required"),
+    .required("Mail is required")
+    .email("Invalid email format"),
   tel: yup
-    .number()
-    .typeError("That doesn't look like a phone number")
-    .positive("A phone number can't start with a minus")
-    .integer("A phone number can't include a decimal point")
-    .min(8)
-    .required("A phone number is required"),
+    .string()
+    .required("A phone number is required")
+    .min(12, "A phone number is not valid")
+    .typeError("A phone number is required"),
 });
