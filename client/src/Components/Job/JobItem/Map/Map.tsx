@@ -9,7 +9,7 @@ const containerStyle: CSS.Properties = {
   height: "200px",
 };
 
-const API_KEY: string = "AIzaSyCJQ3J7laAQ4G2RfsMXW9KAf8P0Aa-fPUs";
+const API_KEY: string = process.env.REACT_APP_MAP_KEY || "";
 
 const defaultOptions = {
   zoomContol: false,
