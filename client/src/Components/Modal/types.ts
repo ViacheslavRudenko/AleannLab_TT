@@ -1,8 +1,8 @@
-import { ReactElement } from "react";
+import { Dispatch, ReactElement, SetStateAction } from "react";
 
 export interface ModalTypes {
   title: string;
   content: ReactElement;
   isModalOpen: boolean;
-  setIsModalOpen: any;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }

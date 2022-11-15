@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { Dispatch, ReactElement, SetStateAction } from "react";
+
 export interface FormValuesTypes {
   firstName: string;
   lastName: string;
   email: string;
-  tel: number | null;
+  tel: string;
 }
 
 export interface FormSetupTypes {
@@ -13,6 +14,6 @@ export interface FormSetupTypes {
 }
 
 export interface FormPropsTypes {
-  setIsModalOpen: any;
-  setModalContent: any;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+  setModalContent: Dispatch<SetStateAction<ReactElement>>;
 }

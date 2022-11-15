@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { formArr, formdefaultValues, formSchema } from "./data";
-import { FormPropsTypes, FormValuesTypes } from "./types";
+import { FormPropsTypes, FormSetupTypes, FormValuesTypes } from "./types";
 import styles from "./index.module.scss";
 import CastomInput from "./Inputs/CastomInput";
 
@@ -10,7 +10,7 @@ const Form = ({ setIsModalOpen, setModalContent }: FormPropsTypes) => {
     handleSubmit,
     formState: { errors },
     control,
-  } = useForm({
+  } = useForm<FormValuesTypes>({
     resolver: yupResolver(formSchema),
     defaultValues: formdefaultValues,
   });
@@ -36,7 +36,7 @@ const Form = ({ setIsModalOpen, setModalContent }: FormPropsTypes) => {
       >
         <div>
           <ul className={styles.formList}>
-            {formArr.map((formData) => (
+            {formArr.map((formData: any) => (
               <ol key={formData.name} className={styles.listItem}>
                 <Controller
                   name={formData.name}

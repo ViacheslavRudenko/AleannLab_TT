@@ -8,11 +8,11 @@ export const formArr: FormSetupTypes[] = [
   { type: "input", name: "tel", label: "Phone number" },
 ];
 
-export const formdefaultValues: any = {
+export const formdefaultValues: FormValuesTypes = {
   firstName: "",
   lastName: "",
   email: "",
-  tel: null,
+  tel: "",
 };
 
 const phoneRegExp =

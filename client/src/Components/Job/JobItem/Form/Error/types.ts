@@ -1,3 +1,3 @@
 export interface ErrorTypes {
-  err: any;
+  err: string;
 }
