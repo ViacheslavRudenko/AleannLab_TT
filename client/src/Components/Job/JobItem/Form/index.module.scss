@@ -1,18 +1,23 @@
 .form {
   .formList {
     @apply grid gap-2 py-5;
+    foo: bar;
     .listItem {
       @apply grid;
+      foo: bar;
       .label {
         @apply bg-white z-10 -mb-3 ml-2 px-2 w-fit;
+        foo: bar;
       }
       .input {
         @apply border py-2 px-5 w-full;
+        foo: bar;
       }
     }
   }
 
   .btnSubmit {
     @apply px-10 py-5 bg-gray-100 rounded-md  block mx-auto;
+    foo: bar;
   }
 }

@@ -1,73 +1,97 @@
 .box {
   @apply py-3 text-[#3A4562];
+  foo: bar;
   .mainInfo {
     @apply grid tablet:grid-cols-[minmax(150px,_1fr)_150px] gap-4;
+    foo: bar;
     .mainTitle {
       @apply font-bold text-2xl;
+      foo: bar;
     }
     .boxInfo {
       @apply flex justify-between items-center py-2;
+      foo: bar;
       .period {
         @apply text-[#878D9D] tablet:hidden block;
+        foo: bar;
       }
       .priceBox {
         @apply grid justify-items-end;
+        foo: bar;
         .price {
           @apply font-bold text-2xl;
+          foo: bar;
         }
       }
     }
     .period {
       @apply text-[#878D9D] hidden tablet:block py-3;
+      foo: bar;
     }
   }
   .applyBox {
     @apply py-4 max-w-fit mx-auto first-of-type:hidden first-of-type:tablet:block first-of-type:mx-0;
+    foo: bar;
     .btn {
       @apply py-4 px-5 bg-[#384564] text-white rounded-lg;
+      foo: bar;
     }
   }
 
   .imgBox {
     @apply pt-10;
+    foo: bar;
   }
   .detailBox {
     @apply pt-10;
+    foo: bar;
     .text {
       @apply pb-3 pt-6 text-[#38415dc6];
+      foo: bar;
     }
     .list {
       @apply grid  grid-cols-2 tablet:grid-cols-3 gap-4;
+      foo: bar;
       .btnType {
         @apply p-4 bg-[#c5cee4] rounded-lg border-2 border-[#5b688b] min-w-fit;
+        foo: bar;
       }
       .btnBenefit {
         @apply p-4 bg-[#fdeca2] rounded-lg border-2 border-[#FFCF00] min-w-fit;
+        foo: bar;
       }
     }
   }
 }
 .title {
   @apply text-3xl font-bold text-[#3A4562] border-b-2 border-[#3a456261];
+  foo: bar;
 }
 
 .contactsBoxTitle {
   @apply pt-10 pb-5 tablet:hidden;
+  foo: bar;
 }
 .contacts {
   @apply bg-[#2A3047] rounded-lg  pt-2 pb-2;
+  foo: bar;
   .infoBox {
     @apply py-7 px-14 text-white leading-9;
+    foo: bar;
     .name {
       @apply pb-4 font-bold;
+      foo: bar;
     }
     .address {
       @apply flex -ml-1;
+      foo: bar;
     }
     .link {
       @apply flex items-center;
+      foo: bar;
       .ico {
         @apply pr-2;
+        foo: bar;
       }
     }
   }

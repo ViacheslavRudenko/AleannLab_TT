@@ -1,9 +1,12 @@
 .boxBtnBack {
   @apply text-white -ml-10;
+  foo: bar;
   .btnback {
     @apply bg-[#8086948f] py-4 px-6 rounded-lg hidden tablet:block;
+    foo: bar;
     .span {
       @apply pr-3;
+      foo: bar;
     }
   }
 }

@@ -1,6 +1,8 @@
 .imgList {
   @apply pt-5;
+  foo: bar;
   .imgItem {
     @apply rounded-md;
+    foo: bar;
   }
 }

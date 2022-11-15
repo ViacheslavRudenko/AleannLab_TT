@@ -1,20 +1,27 @@
 .box {
   @apply justify-center items-center flex overflow-y-hidden fixed inset-0 z-50 outline-none focus:outline-none backdrop-brightness-50;
+  foo: bar;
   .boxModal {
     @apply relative w-full my-6 mx-auto  max-w-[420px] min-w-[320px];
+    foo: bar;
     .smallBoxModal {
       @apply p-10 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none;
+      foo: bar;
       .headerBox {
         @apply flex items-start justify-between  border-b border-solid border-slate-200 rounded-t;
+        foo: bar;
         .headerTitle {
           @apply text-3xl font-semibold;
+          foo: bar;
         }
         .headerbtn {
           @apply ml-auto bg-transparent border-0 text-black  text-3xl;
+          foo: bar;
         }
       }
       .contentBox {
         @apply py-5;
+        foo: bar;
       }
     }
   }

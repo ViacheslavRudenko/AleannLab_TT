@@ -1,6 +1,8 @@
 .content {
   @apply bg-slate-200 text-[#878D9D];
+  foo: bar;
   .contentBox {
     @apply min-h-screen min-w-[320px] max-w-[1400px] mx-auto;
+    foo: bar;
   }
 }

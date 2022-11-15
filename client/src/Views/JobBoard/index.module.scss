@@ -1,14 +1,18 @@
 .jobBoard {
   @apply grid place-items-center p-2 mx-auto py-7;
+  foo: bar;
   .list {
     @apply grid gap-2;
+    foo: bar;
     .listItem {
       @apply grid grid-cols-5 grid-rows-4 tablet:grid-rows-1 
       tablet:grid-cols-[80px_minmax(200px,_1fr)_100px_150px]
       gap-4 px-3 py-6 rounded-lg bg-white;
+      foo: bar;
     }
     .pagination {
       @apply flex justify-center py-10;
+      foo: bar;
     }
   }
 }
