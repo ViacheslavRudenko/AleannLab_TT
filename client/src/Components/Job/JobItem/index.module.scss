@@ -30,13 +30,6 @@
 
   .imgBox {
     @apply pt-10;
-
-    .imgList {
-      @apply flex justify-between;
-      .imgListItem {
-        @apply max-w-[200px];
-      }
-    }
   }
   .detailBox {
     @apply pt-10;

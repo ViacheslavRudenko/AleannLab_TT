@@ -53,6 +53,7 @@ const JobItem = ({ jobItem }: JobItemType): ReactElement => {
 
         <ImgSwiper jobItem={jobItem} />
       </div>
+
       <div className={styles.detailBox}>
         <h6 className={styles.title}>Additional info</h6>
         <p className={styles.text}>Employment type</p>
