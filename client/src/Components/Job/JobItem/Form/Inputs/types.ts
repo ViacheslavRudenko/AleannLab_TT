@@ -1,8 +1,8 @@
-import { FormSetupTypes, FormValuesTypes } from "../types";
+import { FormSetupTypes } from "../types";
 
 export interface CastomInpytTypes {
   formData: FormSetupTypes;
   value: string;
-  onChange: any;
+  onChange: () => void;
   errors: any;
 }
