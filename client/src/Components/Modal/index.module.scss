@@ -1,5 +1,5 @@
 .box {
-  @apply justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none backdrop-brightness-50;
+  @apply justify-center items-center flex overflow-y-hidden fixed inset-0 z-50 outline-none focus:outline-none backdrop-brightness-50;
   .boxModal {
     @apply relative w-full my-6 mx-auto  max-w-[420px] min-w-[320px];
     .smallBoxModal {
