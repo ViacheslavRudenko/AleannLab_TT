@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 const PageLoading = (): ReactElement => {
   return (
     <div className={styles.info}>
-      <CircularProgress />
+      <CircularProgress size={100} />
     </div>
   );
 };
