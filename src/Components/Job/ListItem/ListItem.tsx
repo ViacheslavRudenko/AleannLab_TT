@@ -16,14 +16,21 @@ const ListItem = ({ jobData }: ListItemProps): ReactElement => {
   const wihList = useSelector(
     (state: RootState) => state.UserActivity.wishList
   );
+
+  useEffect(() => {
+    setIsInWishList(wihList.some((data: string) => data === jobData.id));
+  }, [wihList]);
+
   const toggleWishList = () =>
     isInWishList
       ? removeJobFromWishList(jobData.id)
       : addNewJobToWihList(jobData.id);
 
-  useEffect(() => {
-    setIsInWishList(wihList.some((data: string) => data === jobData.id));
-  }, [wihList]);
+  const getRandomRaiting = () => {
+    let randomNum: number = Math.floor(Math.random() * 10 + 1);
+    randomNum > 5 && (randomNum = randomNum / 2);
+    return randomNum;
+  };
 
   return (
     <>
@@ -51,7 +58,7 @@ const ListItem = ({ jobData }: ListItemProps): ReactElement => {
       </div>
 
       <div className={styles.raitingBox}>
-        <Rating rating={jobData?.rating || 4} />
+        <Rating rating={jobData?.rating || getRandomRaiting()} />
       </div>
 
       <div className={styles.infoBox}>
