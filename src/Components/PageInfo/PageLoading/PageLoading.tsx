@@ -1,8 +1,13 @@
+import { CircularProgress } from "@mui/material";
 import { ReactElement } from "react";
 import styles from "./index.module.scss";
 
 const PageLoading = (): ReactElement => {
-  return <p className={styles.info}>Loading, please wait..</p>;
+  return (
+    <div className={styles.info}>
+      <CircularProgress />
+    </div>
+  );
 };
 
 export default PageLoading;
