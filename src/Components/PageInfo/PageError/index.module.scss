@@ -1,4 +1,8 @@
+.info {
+  @apply w-full h-screen flex justify-center items-center;
+  foo: bar;
+}
 .err {
-  @apply text-red-600 text-center p-16;
+  @apply text-red-700;
   foo: bar;
 }
