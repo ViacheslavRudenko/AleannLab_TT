@@ -33,7 +33,7 @@ const PageHeader = ({ jobItem }: JobItemType): ReactElement => {
               <span className={styles.span}>
                 <WishListIcon isInWishList={isInWishList} />
               </span>
-              <span>Save to my list</span>
+              <span>{isInWishList ? "In my list" : "Save to my list"}</span>
             </button>
           </div>
           <div>
